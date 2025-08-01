@@ -30,7 +30,7 @@ Bu proje, modern React teknikleri kullanılarak geliştirilmiş kapsamlı bir ot
 
 ## 🔗 Canlı Demo
 
-👉 [https://the-wild-oasis-alamin.vercel.app](www.test123.com.w)
+👉 [Projeye şimdi göz atın](https://the-wild-oasis-theta-snowy.vercel.app/)
 
 <br/>
 
