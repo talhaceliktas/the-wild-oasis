@@ -1,6 +1,11 @@
 -- WARNING: This schema is for context only and is not meant to be run.
 -- Table order and constraints may not be valid for execution.
 
+CREATE TABLE public.admin_users (
+  id uuid NOT NULL,
+  created_at timestamp with time zone NOT NULL DEFAULT now(),
+  CONSTRAINT admin_users_pkey PRIMARY KEY (id)
+);
 CREATE TABLE public.bookings (
   id bigint GENERATED ALWAYS AS IDENTITY NOT NULL,
   created_at timestamp with time zone NOT NULL DEFAULT now(),
@@ -41,6 +46,17 @@ CREATE TABLE public.guests (
   nationality text,
   countryFlag text,
   CONSTRAINT guests_pkey PRIMARY KEY (id)
+);
+CREATE TABLE public.profiles (
+  id uuid NOT NULL,
+  full_name text NOT NULL,
+  email text NOT NULL,
+  role text DEFAULT 'user'::text,
+  avatar text DEFAULT ''::text,
+  created_at timestamp with time zone DEFAULT now(),
+  updated_at timestamp with time zone DEFAULT now(),
+  CONSTRAINT profiles_pkey PRIMARY KEY (id),
+  CONSTRAINT profiles_id_fkey FOREIGN KEY (id) REFERENCES auth.users(id)
 );
 CREATE TABLE public.settings (
   id bigint GENERATED ALWAYS AS IDENTITY NOT NULL,
