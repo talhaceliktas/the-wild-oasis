@@ -34,7 +34,8 @@ const TodayItem = ({ activity }) => {
 
       <Flag src={guests.countryFlag} alt={`Flag of ${guests.country}`} />
       <Guest>{guests.fullName}</Guest>
-      <div style={{ justifySelf: "flex-end" }}>{numNights} nights</div>
+      <div>{numNights} nights</div>
+
       {status === "unconfirmed" && (
         <Button
           size="small"

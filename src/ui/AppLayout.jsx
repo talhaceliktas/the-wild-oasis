@@ -2,12 +2,17 @@ import { Outlet } from "react-router-dom";
 import Sidebar from "./Sidebar";
 import Header from "./Header";
 import styled from "styled-components";
+import useMediaQuery from "../hooks/useMediaQuery";
 
 const StyledAppLayout = styled.div`
   display: grid;
   grid-template-columns: 26rem 1fr;
   grid-template-rows: auto 1fr;
-  height: 100vh;
+  height: 100dvh;
+
+  @media (max-width: 845px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const Main = styled.main`
@@ -25,10 +30,12 @@ const Container = styled.div`
 `;
 
 const AppLayout = () => {
+  const isNotComputer = useMediaQuery("(max-width: 845px)");
+
   return (
     <StyledAppLayout>
-      <Header />
-      <Sidebar />
+      <Header isNotComputer={isNotComputer} />
+      {!isNotComputer && <Sidebar />}
       <Main>
         <Container>
           <Outlet />
