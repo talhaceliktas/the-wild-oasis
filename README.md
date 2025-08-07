@@ -83,6 +83,9 @@ Bu proje, aşağıdakiler dahil olmak üzere çeşitli gelişmiş React kavramla
 <ul>
   <li><strong>Durum yönetimi ve veri getirme:</strong> Uygulamanın veri akışını verimli bir şekilde yönetmek için React Query kullanımı.</li>
   <li><strong>Karmaşık UI desenleri:</strong> Bileşik bileşen paterni ve daha yüksek dereceli bileşenler (HOC) gibi yeniden kullanılabilir desenlerin uygulanması, daha bakımlı ve ölçeklenebilir kodlar oluşturmayı sağladı.</li>
+  <li><strong>Supabase entegrasyonu:</strong> Supabase ile gerçek zamanlı veri yönetimi, kimlik doğrulama ve backend hizmetlerinin başarılı bir şekilde uygulanması.</li>
+  <li><strong>Hata ayıklama ve test:</strong> React Testing Library ve Jest kullanılarak kapsamlı testler yapılması ve uygulamanın kararlılığının artırılması.</li>
+  <li><strong>Performans optimizasyonları:</strong> React.memo, useMemo ve useCallback gibi tekniklerle uygulamanın performansının iyileştirilmesi.</li>
 </ul>
 
 <br/>
